@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Execution context</title>
+
+    <style>
+        body {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            
+        }
+        
+        img{
+            
+            height: 300px;
+            width: 500px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container"> <h1>What is an Execution Context?</h1>
+
+        <p>Whenever you write some code, your code is in a space — that space is called the “execution context”. Imagine you wrote a simple calculator:
+    
+          <div><img src="./codeimg.png" alt="codeexample imgae"></div>  
+         
+            <p>In JavaScript, whenever a function is invoked, a new execution context is created on the execution context currently running. A newly created one is stored in the stack for execution contexts.
+            So, if we call cal(), the new context will be created and it will be pushed to the context stack. But, by default, there’s an already existing context in the stack — a global execution context.
+        </p>
+
+    <img src="./executionimg.png" alt="execution Context image">
+
+        <p>First the function cal is called and run so the new execution context is created. Then it is stored in the context stack. Then the control of the current execution context is transferred to the newly created one from, in this case, the global context. <br> An execution context is created whenever you call a function. </p>
+        
+    </div>
+   
+</body>
+</html>
